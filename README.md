@@ -1,18 +1,7 @@
-## Getting Started
+# Chip 8 Emulator
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This Chip 8 emulator is written in Java. I have always been interested in vintage systems and, specifically, in emulation. The Chip 8 system is widely regarded as an excellent starting point for learning about emulator development.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Resources
+- [Wikipedia's Chip 8 Article](https://en.wikipedia.org/wiki/CHIP-8)
+- [Cowgod's Chip 8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
