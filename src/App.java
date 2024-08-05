@@ -43,7 +43,7 @@ public class App extends Thread {
             try {
                 Thread.sleep(FRAME_DURATION);
             } catch (Exception e) {
-                // TODO: handle exception
+                e.printStackTrace();
             }
         }
     }
