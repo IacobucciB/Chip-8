@@ -4,7 +4,7 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-public class GamePanel extends JPanel implements Runnable {
+public class GamePanel extends JPanel {
 
     private final int tileSize = 16;
 
@@ -14,52 +14,16 @@ public class GamePanel extends JPanel implements Runnable {
     private final int WIDTH = tileSize * COL;
     private final int HEIGHT = tileSize * ROW;
 
-    private final int FPS = 60;
-    private final long FRAME_DURATION = 1000 / FPS;
-
-    private int[][] matrix = new int[COL][ROW];
-
-    public int[][] getMatrix() {
-        return matrix;
-    }
-
-    public void setMatrix(int[][] matrix) {
-        this.matrix = matrix;
-    }
-
-    Thread gameThread;
-
+       private int[][] matrix = new int[COL][ROW];
+    
     public GamePanel() {
         this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
     }
-
-    public void startGameThread() {
-        gameThread = new Thread(this);
-        gameThread.start();
-    }
-
-    @Override
-    public void run() {
-
-        while (gameThread != null) {
-
-            update();
-            repaint();
-
-            try {
-                Thread.sleep(FRAME_DURATION);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-    public void update() {
-
-
+    
+    public void update(int[][] matrix) {
+        this.matrix = matrix;
    }
 
     public void paintComponent(Graphics g) {
