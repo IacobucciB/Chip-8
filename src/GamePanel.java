@@ -58,14 +58,14 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update() {
-        // TODO create an internal matrix in this class, thne call update from App to
-        // change the matrix here
+
 
    }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         paintMatrix(g);
+        g.dispose();
     }
 
     private void paintMatrix(Graphics g) {

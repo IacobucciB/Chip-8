@@ -4,6 +4,9 @@ public class Chip {
     private byte[] registers = new byte[16];
 
 
+    public Chip() {
+    }
+
     public byte[] getMemory() {
         return memory;
     }
