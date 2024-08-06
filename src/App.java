@@ -9,7 +9,9 @@ public class App implements Runnable {
     private final long FRAME_DURATION = 1000 / FPS;
 
     public App() {
-        chip = new Chip();
+        RomReader romReader = new RomReader();
+        int[] readBytes = romReader.readRom("./roms/IBM Logo.ch8");
+        chip = new Chip(readBytes);
         chip.init();
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
