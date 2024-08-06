@@ -5,3 +5,4 @@ This Chip 8 emulator is written in Java. I have always been interested in vintag
 ## Resources
 - [Wikipedia's Chip 8 Article](https://en.wikipedia.org/wiki/CHIP-8)
 - [Cowgod's Chip 8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
+- [How to write an emulator (CHIP-8 interpreter) - Laurence Muller](https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
