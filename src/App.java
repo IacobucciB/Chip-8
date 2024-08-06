@@ -1,13 +1,12 @@
 import javax.swing.JFrame;
 
-public class App extends Thread {
+public class App implements Runnable {
 
     private Chip chip;
     private GamePanel gamePanel;
 
     private final int FPS = 60;
     private final long FRAME_DURATION = 1000 / FPS;
-
 
     public App() {
         chip = new Chip();
@@ -27,12 +26,12 @@ public class App extends Thread {
     public static void main(String[] args) throws Exception {
         System.out.println("Chip 8 Emulator");
         App app = new App();
-        app.start();
+        Thread thread = new Thread(app);
+        thread.start();
     }
 
     @Override
     public void run() {
-
         while (true) {
             chip.run();
             gamePanel.update(chip.getMatrix());
