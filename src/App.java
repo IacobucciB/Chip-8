@@ -36,7 +36,7 @@ public class App implements Runnable {
     public void run() {
         while (true) {
             chip.run();
-            gamePanel.update(chip.getMatrix());
+            gamePanel.update(chip.getDisplay());
             if (chip.draw()) {
                 gamePanel.repaint();
                 chip.finished();
