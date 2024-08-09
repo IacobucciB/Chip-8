@@ -160,7 +160,7 @@ public class Chip {
         switch (opcode & 0xF000) {
             case 0x0000:
                 switch (opcode & 0x00FF) {
-                    case 0x00E0: // 00E0 - Clear screen (not implemented)
+                    case 0x00E0: // 00E0 - Clear screen
                         clearScreen();
                         break;
                     case 0x00EE: // 00EE - Return from subroutine
@@ -202,7 +202,7 @@ public class Chip {
             case 0xD000: // DXYN - Display/draw sprites
                 drawSprites((opcode & 0x0F00) >> 8, (opcode & 0x00F0) >> 4, opcode & 0x000F);
                 break;
-            // Other cases can be added here
+            
         }
 
     }
